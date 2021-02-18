@@ -2,6 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
+
+
 base_url = 'https://books.toscrape.com/catalogue/'
 
 product_links = []
@@ -43,3 +45,9 @@ for link in product_links:
 
 df = pd.DataFrame(book_list)
 df.to_csv('Scrape_book.csv')
+data = pd.read_csv('Scrape_book.csv')
+data_category_range = data['Category'].unique()
+data_category_range = data_category_range.tolist()
+
+for i, value in enumerate(data_category_range):
+    data[data['Category'] == value].to_csv(r'Category_'+str(value)+r'.csv', index=False, na_rep='N/A')
