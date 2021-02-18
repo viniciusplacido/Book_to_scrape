@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import re
 
 
 base_url = 'https://books.toscrape.com/catalogue/'
@@ -21,8 +22,9 @@ for link in product_links:
     soup = BeautifulSoup(r.text, 'html.parser')
 
     name = soup.find('div', class_='item active').find('img')['alt']
+    name1 = re.sub("[^0-9a-zA-Z']+", ' ', name)
     image_url = soup.find('div', class_='item active').find('img')['src'].replace('../../',
                                                                                   'http://books.toscrape.com/')
-    with open(name[0:20].replace(' ', '-').replace('/', '').replace(':', '').replace('?', '').replace('"', '').replace('*', '') + '.jpg', 'wb') as f:
+    with open(name1[0:50] + '.jpg', 'wb') as f:
         im = requests.get(image_url)
         f.write(im.content)
