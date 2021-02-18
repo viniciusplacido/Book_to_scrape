@@ -19,7 +19,7 @@ lxml==4.6.2
 
 
 
--->Installation
+-->Installation:
 Python:: You can download Python using the following link: https://www.python.org/downloads/
 
 PIP:: Package management system used to install and manage software packages written in Python. It stands for “preferred installer program” or “Pip Installs Packages”. PIP is automatically installed with Python 2.7.9+ and Python 3.4+. Check if PIP is already installed before you install PIP on Windows, check if PIP is already installed. Type in the following command at the command prompt: pip help
@@ -29,7 +29,7 @@ Requirements files:: Instead of installing packages individually, pip allows you
 
 
 
--->Virtual environment
+-->Virtual environment:
 Before you can start installing or using packages in your virtual environment you’ll need to activate it. Activating a virtual environment will put the virtual environment-specific python and pip executables into your shell’s PATH.
 
 On macOS and Linux: source env/bin/activate
