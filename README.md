@@ -1,4 +1,4 @@
-# Book_to_scrape
+# Web Scraping: Books to Scrape
 
 -->Description:
 These codes were created as part of project 2 of Python Developer course from Open Classroom. The goal was to create a code (Scrape_books.py) to extract information from the website https://books.toscrape.com/ in a web scraping process with Python.
